@@ -478,7 +478,7 @@ a.contact{
     align-items: center;      /* vertical centering */
     width: 300px;
     height: 65px;             /* match the .footer height */
-    margin: 0 auto;           /* optional: center the whole .left_footer in the footer */
+            /* optional: center the whole .left_footer in the footer */
 
 }
 .left_footer img {
@@ -497,10 +497,14 @@ a.contact{
     text-decoration:underline;
 }
 
-.center_footer{
-    float:left;
-    width:200px;
-    text-align:center;
-    color:#666666;
-    padding:10px 0 0 60px;
+.center_footer {
+    text-align: center;
+    color: #666;
+    font-size: 13px;
+    padding-top: 10px;
 }
+.product-img {
+        width: 100%;
+        height: 50px;
+        object-fit: contain;
+    }

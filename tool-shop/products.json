@@ -1,0 +1,24 @@
+[
+  {
+    "id": 1,
+    "name": "Echo CS-590 Timber Wolf",
+    "description": "Professional-grade chainsaw with high-performance cutting power.",
+    "price": 429,
+    "image": "images/echo.jpg"
+    
+  },
+  {
+    "id": 2,
+    "name": "Stihl MS 362 C-M",
+    "description": "Fuel-efficient, smart engine management, reliable for forestry work.",
+    "price": 599,
+    "image": "images/stihl362.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Silky Katanaboy 500mm",
+    "description": "Folding saw ideal for remote trail clearing and camping.",
+    "price": 119,
+    "image": "images/katanaboy.jpg"
+  }
+]
