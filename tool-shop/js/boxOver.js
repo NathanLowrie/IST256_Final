@@ -1,3 +1,4 @@
+// Handle Support Form Submission
 const supportForm = document.getElementById('supportForm');
 if (supportForm) {
     supportForm.addEventListener('submit', function (e) {
@@ -7,6 +8,7 @@ if (supportForm) {
     });
 }
 
+// Handle Contact Form Submission
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
     contactForm.addEventListener('submit', function (e) {
@@ -16,88 +18,147 @@ if (contactForm) {
     });
 }
 
-function updateCartTotal() {
-    let total = 0;
-    const rows = document.querySelectorAll('#cartTable tbody tr');
-    rows.forEach(row => {
-        const priceText = row.children[2].textContent.replace('$', '');
-        total += parseFloat(priceText);
-    });
-    const totalDisplay = document.getElementById('cartTotal');
-    if (totalDisplay) {
-        totalDisplay.textContent = `$${total}`;
-    }
+// Mini Cart Summary
+function updateMiniCart() {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const totalItems = cart.reduce((acc, item) => acc + (parseInt(item.quantity) || 0), 0);
+    const totalPrice = cart.reduce((acc, item) => acc + (item.price * item.quantity), 0);
+
+    const cartItemsElem = document.getElementById('cartItems');
+    const cartTotalElem = document.getElementById('cartTotal');
+
+    if (cartItemsElem) cartItemsElem.textContent = totalItems;
+    if (cartTotalElem) cartTotalElem.textContent = `$${totalPrice.toFixed(2)}`;
 }
 
-function setupCartButtons() {
-    const removeButtons = document.querySelectorAll('.remove-btn');
-    removeButtons.forEach(button => {
-        button.addEventListener('click', function () {
-            const row = this.closest('tr');
-            row.remove();
-            updateCartTotal();
-        });
-    });
-}
+// Add to Cart Buttons
+function setupAddToCartButtons(scope = document) {
+    const buttons = scope.querySelectorAll('.prod_buy');
+    buttons.forEach(button => {
+        if (!button.dataset.bound) {
+            button.dataset.bound = 'true'; // prevent duplicate events
 
-document.addEventListener('DOMContentLoaded', () => {
-    setupCartButtons();
-});
-document.addEventListener('DOMContentLoaded', function () {
-    fetch('products.json')
-        .then(response => response.json())
-        .then(products => {
-            const productList = document.getElementById('productList');
-            if (!productList) return;
+            button.addEventListener('click', function (e) {
+                e.preventDefault();
 
-            products.forEach(product => {
-                const col = document.createElement('div');
-                col.className = 'col-md-4 mb-4';
+                const id = this.dataset.id;
+                const name = this.dataset.name;
+                const price = parseFloat(this.dataset.price);
+                const quantity = parseInt(this.dataset.quantity) || 1;
 
-                col.innerHTML = `
-  <div class="card h-100 text-center">
-    <img src="${product.image}" class="card-img-top product-img" alt="${product.name}">
-    <div class="card-body">
-      <h5 class="card-title">${product.name}</h5>
-      <p class="card-text">${product.description}</p>
-      <p class="text-success fw-bold">$${product.price}</p>
-      <button class="btn btn-sm btn-primary">Add to Cart</button>
-    </div>
-  </div>
-`;
+                if (!id || !name || isNaN(price)) return;
 
-                productList.appendChild(col);
+                let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                const item = cart.find(item => item.id === id);
+
+                if (item) {
+                    item.quantity += quantity;
+                } else {
+                    cart.push({ id, name, price, quantity });
+                }
+
+                localStorage.setItem('cart', JSON.stringify(cart));
+                updateMiniCart();
+                alert(`${name} added to cart.`);
             });
-        })
-        .catch(error => {
-            console.error('Error loading JSON:', error);
-        });
-});
-document.addEventListener('DOMContentLoaded', function () {
-    // Add to Cart functionality (already added)
-    document.querySelectorAll('.prod_buy').forEach(button => {
-        button.addEventListener('click', function (e) {
-            e.preventDefault();
-            const price = parseFloat(this.getAttribute('data-price'));
-            if (!isNaN(price)) {
-                let cartItems = parseInt(document.getElementById('cartItems').textContent) || 0;
-                let cartTotal = parseFloat(document.getElementById('cartTotal').textContent.replace('$', '')) || 0;
-                cartItems += 1;
-                cartTotal += price;
-                document.getElementById('cartItems').textContent = cartItems;
-                document.getElementById('cartTotal').textContent = `$${cartTotal.toFixed(2)}`;
-            }
-        });
+        }
+    });
+}
+
+// Cart Page Table Builder
+function updateCartTable() {
+    const tableBody = document.querySelector('#cartTable tbody');
+    const totalDisplay = document.getElementById('cartTotal');
+    if (!tableBody || !totalDisplay) return;
+
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    let total = 0;
+    tableBody.innerHTML = '';
+
+    cart.forEach(item => {
+        const rowTotal = item.price * item.quantity;
+        total += rowTotal;
+
+        const row = document.createElement('tr');
+        row.innerHTML = `
+            <td>${item.name}</td>
+            <td>${item.quantity}</td>
+            <td>$${rowTotal.toFixed(2)}</td>
+            <td><button class="btn btn-danger btn-sm remove-btn">Remove</button></td>
+        `;
+        tableBody.appendChild(row);
     });
 
-    // Details toggle functionality
-    document.querySelectorAll('.prod_details').forEach((button, index) => {
+    totalDisplay.textContent = `$${total.toFixed(2)}`;
+}
+
+// Cart Remove Buttons
+function setupCartRemoveButtons() {
+    const table = document.getElementById('cartTable');
+    if (!table) return;
+
+    table.addEventListener('click', function (e) {
+        if (e.target.classList.contains('remove-btn')) {
+            const row = e.target.closest('tr');
+            const name = row.querySelector('td')?.textContent;
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart = cart.filter(item => item.name !== name);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            updateCartTable();
+            updateMiniCart();
+        }
+    });
+}
+
+// Description Toggle
+function setupProductDetailToggles() {
+    document.querySelectorAll('.prod_details').forEach(button => {
         button.addEventListener('click', function (e) {
             e.preventDefault();
-            const desc = this.closest('.prod_box').querySelector('.product_description');
+            const desc = this.closest('.prod_box')?.querySelector('.product_description');
             if (desc) {
                 desc.style.display = desc.style.display === 'none' ? 'block' : 'none';
             }
         });
     });
+}
+
+// Top Products from JSON
+function loadTopProducts() {
+    const productList = document.getElementById('productList');
+    if (!productList) return;
+
+    fetch('products.json')
+        .then(response => response.json())
+        .then(products => {
+            productList.innerHTML = '';
+            products.forEach(product => {
+                const div = document.createElement('div');
+                div.className = 'col-md-12 mb-4';
+                div.innerHTML = `
+                    <div class="card h-100 text-center">
+                        <img src="${product.image}" class="card-img-top product-img" alt="${product.name}">
+                        <div class="card-body">
+                            <h5 class="card-title">${product.name}</h5>
+                            <p class="card-text">${product.description}</p>
+                            <p class="text-success fw-bold">$${product.price}</p>
+                            <button class="btn btn-sm btn-primary prod_buy" data-id="${product.id}" data-name="${product.name}" data-price="${product.price}" data-quantity="1">Add to Cart</button>
+                        </div>
+                    </div>
+                `;
+                productList.appendChild(div);
+            });
+            setupAddToCartButtons(); // for dynamically added buttons
+        })
+        .catch(error => console.error('Error loading top products:', error));
+}
+
+// Initialize
+document.addEventListener('DOMContentLoaded', function () {
+    setupAddToCartButtons();
+    setupCartRemoveButtons();
+    setupProductDetailToggles();
+    updateMiniCart();
+    updateCartTable();
+    loadTopProducts();
 });

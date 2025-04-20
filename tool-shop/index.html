@@ -4,10 +4,11 @@
   <title>TimberSand Lumber Supply</title>
   <meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
   <link rel="stylesheet" type="text/css" href="style.css" />
-  <script type="text/javascript" src="js/boxOver.js"></script>
+  <script type="text/javascript" src="js/boxOver.js" defer></script>
 </head>
 <body>
 <div id="main_container">
+  <!-- Header -->
   <div id="header">
     <div class="top_right">
       <div class="languages">
@@ -15,7 +16,6 @@
         <a href="#" class="lang"><img src="images/en.gif" alt="English" /></a>
         <a href="#" class="lang"><img src="images/de.gif" alt="German" /></a>
       </div>
-      <div class="big_banner"></div>
     </div>
     <div id="logo">
       <a href="index.html">
@@ -24,9 +24,12 @@
     </div>
   </div>
 
+  <!-- Tagline -->
   <div id="tagline">Cut with Precision, Mill with Power</div>
 
+  <!-- Main Content -->
   <div id="main_content">
+    <!-- Navigation -->
     <div id="menu_tab">
       <ul class="menu">
         <li><a href="index.html" class="nav">Home</a></li>
@@ -39,8 +42,7 @@
       </ul>
     </div>
 
-    <div class="crumb_navigation">Navigation: <span class="current">Home</span></div>
-
+    <!-- Left Sidebar -->
     <div class="left_content">
       <div class="title_box">Deal of the Day</div>
       <div class="border_box">
@@ -48,80 +50,65 @@
         <div class="product_img"><a href="product-details.html"><img src="images/p1.jpg" alt="Makita Deal" /></a></div>
         <div class="prod_price"><span class="reduce">$350</span> <span class="price">$270</span></div>
       </div>
-
-      <div class="title_box">Always looking for Deals?</div>
-      <div class="border_box">
-        <input type="text" name="newsletter" class="newsletter_input" value="your email" />
-        <a href="#" class="join">Subscribe</a>
-      </div>
-
-      <div class="banner_adds">
-        <a href="#"><img src="images/bann2.jpg" alt="Banner" /></a>
-      </div>
     </div>
 
+    <!-- Center Content -->
     <div class="center_content">
       <div class="oferta">
-        <img src="images/p1.png" width="165" height="113" class="oferta_img" alt="Chainsaw Banner" />
+        <img src="images/freepik-hand-drawn-professional-woodwork-carpenter-logo-202504162246231R1M.png" width="165" height="113" class="oferta_img" alt="Chainsaw Banner" />
         <div class="oferta_details">
-          <div class="oferta_title">Put something about chainsaws in here</div>
-          <div class="oferta_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-          <a href="#" class="prod_buy">Details</a>
+          <div class="oferta_title">Our Mission</div>
+          <div class="oferta_text">At TimberSand Lumber Supply, our mission is to empower craftsmen, homesteaders, and professionals with high-quality chainsaw and milling equipment. We are committed to delivering reliable tools, expert guidance, and exceptional customer service that support efficient wood processing and sustainable craftsmanship from forest to finish.</div>
         </div>
       </div>
 
       <div class="center_title_bar">Recommended Products</div>
+
+      <!-- Product 1 -->
       <div class="prod_box">
         <div class="center_prod_box">
-          <div class="product_title"><a href="#">Oregon 20' Bar and chain</a></div>
-          <div class="product_img"><a href="#"><img src="images/barchain.jpg" height="150px" width="120px"/></a></div>
+          <div class="product_title"><a href="#">Oregon 20' Bar and Chain</a></div>
+          <div class="product_img"><a href="#"><img src="images/barchain.jpg" height="150" width="120" alt="Bar and Chain" /></a></div>
           <div class="prod_price"><span class="reduce">$50</span> <span class="price">$49.99</span></div>
         </div>
-
         <div class="prod_details_tab">
-          <a href="#" class="prod_buy" data-price="49.99">Add to Cart</a>
+          <a href="#" class="prod_buy" data-id="bar-chain" data-name="Oregon 20' Bar and Chain" data-price="49.99" data-quantity="1">Add to Cart</a>
           <a href="#" class="prod_details">Details</a>
         </div>
-        <p class="product_description" style="display:none; margin: 8px 0 0 10px; font-size: 11px; color: #555;">
-          Durable 20" Oregon bar and chain combo for efficient cutting and long life. Ideal for heavy-duty lumber tasks.
-        </p>
+        <p class="product_description" style="display:none;">Durable 20" Oregon bar and chain combo for efficient cutting and long life. Ideal for heavy-duty lumber tasks.</p>
       </div>
+
+      <!-- Product 2 -->
       <div class="prod_box">
         <div class="center_prod_box">
-          <div class="product_title"><a href="#">Husqvarna Premix fuel</a></div>
-          <div class="product_img"><a href="#"><img src="images/premixfuel.jpg" height="150px" width="120px"/></a></div>
-          <div class="prod_price"><span class="price">$10/quart</span></div>
+          <div class="product_title"><a href="#">Husqvarna Premix Fuel</a></div>
+          <div class="product_img"><a href="#"><img src="images/premixfuel.jpg" height="150" width="120" alt="Premix Fuel" /></a></div>
+          <div class="prod_price"><span class="price">$10</span></div>
         </div>
         <div class="prod_details_tab">
-          <a href="#" class="prod_buy" data-price="10">Add to Cart</a>
+          <a href="#" class="prod_buy" data-id="husqvarna-premix" data-name="Husqvarna Premix Fuel" data-price="10" data-quantity="1">Add to Cart</a>
           <a href="#" class="prod_details">Details</a>
         </div>
-        <p class="product_description" style="display:none; margin: 8px 0 0 10px; font-size: 11px; color: #555;">
-          A high-performance, ready-to-use 50:1 fuel and oil mix optimized for 2-stroke engines. Husqvarna's premium premix ensures cleaner combustion, reduces engine deposits, and extends engine life — ideal for chainsaws and handheld outdoor tools.
-        </p>
+        <p class="product_description" style="display:none;">High-performance 50:1 fuel/oil mix for 2-stroke engines. Cleaner combustion, longer engine life.</p>
       </div>
 
+      <!-- Product 3 -->
       <div class="prod_box">
         <div class="center_prod_box">
           <div class="product_title"><a href="#">Oregon File Set</a></div>
-          <div class="product_img"><a href="#"><img src="images/oregon.jpg" height="150px" width="120px"/></a></div>
+          <div class="product_img"><a href="#"><img src="images/oregon.jpg" height="150" width="120" alt="File Set" /></a></div>
           <div class="prod_price"><span class="price">$19</span></div>
         </div>
         <div class="prod_details_tab">
-          <a href="#" class="prod_buy" data-price="19">Add to Cart</a>
+          <a href="#" class="prod_buy" data-id="oregon-file-set" data-name="Oregon File Set" data-price="19" data-quantity="1">Add to Cart</a>
           <a href="#" class="prod_details">Details</a>
         </div>
-        <p class="product_description" style="display:none; margin: 8px 0 0 10px; font-size: 11px; color: #555;">
-          This professional-grade file set includes round and flat files for precise chain sharpening. Designed for durability and ease of use, it helps maintain cutting efficiency and extends the life of your chainsaw chain in the field or shop.
-        </p>
+        <p class="product_description" style="display:none;">Professional file set for sharpening chains. Includes round and flat files for all sizes.</p>
       </div>
     </div>
+
+    <!-- Right Sidebar -->
     <div class="right_content">
-      <div class="title_box">Search</div>
-      <div class="border_box">
-        <input type="text" name="search" class="newsletter_input" value="keyword" />
-        <a href="#" class="join">Search</a>
-      </div>
       <div>
         <h3>Top Products</h3>
         <div class="row" id="productList"></div>
@@ -129,18 +116,19 @@
       <div class="cart_details">
         <span id="cartItems">0</span> items<br />
         <span class="border_cart"></span>
-        Total: <span class="price" id="cartTotal">$0</span>
+        Total: <span class="price" id="cartTotal">$0.00</span><br /><br />
+        <a href="cart.html" class="btn_checkout">Go To Cart</a>
       </div>
-  </div>
+    </div>
 
-  <div class="footer">
-
-    <div class="center_footer">
-      TimberSand Lumber Supply &copy; 2025<br />
-      <img src="images/payment.gif" alt="Payment Methods" />
+    <!-- Footer -->
+    <div class="footer">
+      <div class="center_footer">
+        TimberSand Lumber Supply &copy; 2025<br />
+        <img src="images/payment.gif" alt="Payment Methods" />
+      </div>
     </div>
   </div>
 </div>
-<script src="js/boxOver.js"></script>
 </body>
 </html>
