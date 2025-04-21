@@ -1,4 +1,3 @@
-// Handle Support Form Submission
 const supportForm = document.getElementById('supportForm');
 if (supportForm) {
     supportForm.addEventListener('submit', function (e) {
@@ -8,7 +7,6 @@ if (supportForm) {
     });
 }
 
-// Handle Contact Form Submission
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
     contactForm.addEventListener('submit', function (e) {
@@ -18,7 +16,6 @@ if (contactForm) {
     });
 }
 
-// Mini Cart Summary
 function updateMiniCart() {
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
     const totalItems = cart.reduce((acc, item) => acc + (parseInt(item.quantity) || 0), 0);
@@ -31,7 +28,6 @@ function updateMiniCart() {
     if (cartTotalElem) cartTotalElem.textContent = `$${totalPrice.toFixed(2)}`;
 }
 
-// Add to Cart Buttons
 function setupAddToCartButtons(scope = document) {
     const buttons = scope.querySelectorAll('.prod_buy');
     buttons.forEach(button => {
@@ -65,7 +61,6 @@ function setupAddToCartButtons(scope = document) {
     });
 }
 
-// Cart Page Table Builder
 function updateCartTable() {
     const tableBody = document.querySelector('#cartTable tbody');
     const totalDisplay = document.getElementById('cartTotal');
@@ -92,7 +87,6 @@ function updateCartTable() {
     totalDisplay.textContent = `$${total.toFixed(2)}`;
 }
 
-// Cart Remove Buttons
 function setupCartRemoveButtons() {
     const table = document.getElementById('cartTable');
     if (!table) return;
@@ -110,7 +104,6 @@ function setupCartRemoveButtons() {
     });
 }
 
-// Description Toggle
 function setupProductDetailToggles() {
     document.querySelectorAll('.prod_details').forEach(button => {
         button.addEventListener('click', function (e) {
@@ -123,7 +116,7 @@ function setupProductDetailToggles() {
     });
 }
 
-// Top Products from JSON
+
 function loadTopProducts() {
     const productList = document.getElementById('productList');
     if (!productList) return;
@@ -148,12 +141,12 @@ function loadTopProducts() {
                 `;
                 productList.appendChild(div);
             });
-            setupAddToCartButtons(); // for dynamically added buttons
+            setupAddToCartButtons();
         })
         .catch(error => console.error('Error loading top products:', error));
 }
 
-// Initialize
+
 document.addEventListener('DOMContentLoaded', function () {
     setupAddToCartButtons();
     setupCartRemoveButtons();
