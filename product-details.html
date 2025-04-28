@@ -1,166 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Product Details | TimberSand Lumber Supply</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" type="text/css" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
   <script src="boxOver.js" defer></script>
 </head>
 <body>
-<div id="main_container" class="container">
-
-
-  <div id="header" class="d-flex justify-content-between align-items-center py-3">
-    <div id="logo">
+<div class="container py-3">
+  <header class="d-flex justify-content-between align-items-center mb-3">
+    <div>
       <a href="index.html">
-        <img src="images/freepik-hand-drawn-professional-woodwork-carpenter-logo-202504162246231R1M.png"
-             alt="TimberSand Lumber Supply" width="210" height="170" />
+        <img src="images/freepik-hand-drawn-professional-woodwork-carpenter-logo-202504162246231R1M.png" alt="TimberSand Logo" width="210" height="170">
       </a>
     </div>
+    <div class="d-flex align-items-center">
+      <span class="me-2 text-secondary">Languages:</span>
+      <a href="#" class="me-2"><img src="images/en.gif" alt="English"></a>
+      <a href="#"><img src="images/de.gif" alt="German"></a>
+    </div>
+  </header>
+  <div class="text-center mb-4">
+    <h2 class="fw-bold" style="font-family: 'Brush Script MT', cursive; font-size: 35px; color: black;">Cut with Precision, Mill with Power</h2>
   </div>
 
-
-  <div id="main_content">
-    <div id="menu_tab">
-      <ul class="menu">
-        <li><a href="index.html" class="nav">Home</a></li>
-        <li><a href="chainsaws.html" class="nav">Saws</a></li>
-        <li><a href="milling.html" class="nav">Milling</a></li>
-        <li><a href="product-details.html" class="nav">Product Details</a></li>
-        <li><a href="support.html" class="nav">Support</a></li>
-        <li><a href="contact.html" class="nav">Contact</a></li>
-        <li><a href="cart.html" class="nav">Cart</a></li>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark rounded mb-4">
+    <div class="container-fluid justify-content-center">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="chainsaws.html">Saws</a></li>
+        <li class="nav-item"><a class="nav-link" href="milling.html">Milling</a></li>
+        <li class="nav-item"><a class="nav-link" href="product-details.html">Product Details</a></li>
+        <li class="nav-item"><a class="nav-link" href="support.html">Support</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="cart.html">Cart</a></li>
       </ul>
     </div>
-
-
-    <div class="center_content">
-      <div class="center_title_bar">Product Details</div>
-
-
-      <div class="row justify-content-center">
-
-        <div class="col-md-8 mb-4">
-          <div class="prod_box">
-            <div class="center_prod_box text-center">
-              <div class="product_title"><a href="#">Echo CS-590 Timber Wolf</a></div>
-              <div class="product_img mb-3">
-                <img src="images/echo.jpg" alt="Echo Chainsaw" class="img-fluid" />
-              </div>
-              <p class="px-3">Professional-grade chainsaw with high-performance cutting power, ideal for felling trees and heavy-duty forestry work.</p>
-              <div class="prod_price"><span class="price">$429</span></div>
-              <div class="prod_details_tab d-flex justify-content-between px-3 mt-3">
-                <a href="#" class="prod_buy" data-id="echo-cs590" data-name="Echo CS-590 Timber Wolf" data-price="429" data-quantity="1">Add to Cart</a>
-                <a href="chainsaws.html" class="prod_details">Back to Saws</a>
-              </div>
+  </nav>
+  <div class="mb-4">
+    <h3 class="bg-secondary text-white p-2 rounded">Product Details</h3>
+    <div class="row justify-content-center">
+      <div class="col-md-4 mb-4">
+        <div class="prod_box">
+          <div class="center_prod_box text-center">
+            <div class="product_title"><a href="#">Echo CS-590 Timber Wolf</a></div>
+            <div class="product_img mb-3">
+              <img src="images/echo.jpg" alt="Echo Chainsaw" class="img-fluid">
             </div>
-          </div>
-        </div>
-
-
-        <div class="col-md-8 mb-4">
-          <div class="prod_box">
-            <div class="center_prod_box text-center">
-              <div class="product_title"><a href="#">Stihl MS 362 C-M</a></div>
-              <div class="product_img mb-3">
-                <img src="images/stihl362.jpg" alt="Stihl Chainsaw" class="img-fluid" />
-              </div>
-              <p class="px-3">Fuel-efficient, smart engine management chainsaw, reliable for forestry professionals.</p>
-              <div class="prod_price"><span class="reduce">$679</span> <span class="price">$599</span></div>
-              <div class="prod_details_tab d-flex justify-content-between px-3 mt-3">
-                <a href="#" class="prod_buy" data-id="stihl-362" data-name="Stihl MS 362 C-M" data-price="599" data-quantity="1">Add to Cart</a>
-                <a href="chainsaws.html" class="prod_details">Back to Saws</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="col-md-8 mb-4">
-          <div class="prod_box">
-            <div class="center_prod_box text-center">
-              <div class="product_title"><a href="#">Silky Katanaboy 500mm</a></div>
-              <div class="product_img mb-3">
-                <img src="images/katanaboy.jpg" alt="Silky Saw" class="img-fluid" />
-              </div>
-              <p class="px-3">Folding saw ideal for trail clearing and remote cutting where chainsaws aren't practical.</p>
-              <div class="prod_price"><span class="reduce">$130</span> <span class="price">$119</span></div>
-              <div class="prod_details_tab d-flex justify-content-between px-3 mt-3">
-                <a href="#" class="prod_buy" data-id="silky-katana" data-name="Silky Katanaboy 500mm" data-price="119" data-quantity="1">Add to Cart</a>
-                <a href="chainsaws.html" class="prod_details">Back to Saws</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="col-md-8 mb-4">
-          <div class="prod_box">
-            <div class="center_prod_box text-center">
-              <div class="product_title"><a href="#">Bahco Bow Saw 30"</a></div>
-              <div class="product_img mb-3">
-                <img src="images/bowsaw.webp" alt="Bahco Bow Saw" class="img-fluid" />
-              </div>
-              <p class="px-3">Strong and versatile bow saw for yard and log cutting. Built for comfort and cutting accuracy.</p>
-              <div class="prod_price"><span class="price">$100</span></div>
-              <div class="prod_details_tab d-flex justify-content-between px-3 mt-3">
-                <a href="#" class="prod_buy" data-id="bahco-bowsaw" data-name="Bahco Bow Saw 30" data-price="100" data-quantity="1">Add to Cart</a>
-                <a href="chainsaws.html" class="prod_details">Back to Saws</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="col-md-8 mb-4">
-          <div class="prod_box">
-            <div class="center_prod_box text-center">
-              <div class="product_title"><a href="#">Peterson Horizontal Band Portable Saw Mill</a></div>
-              <div class="product_img mb-3">
-                <img src="images/sawmill.jpg" alt="Sawmill" class="img-fluid" />
-              </div>
-              <p class="px-3">Designed for industrial log milling. Mobile, adjustable horizontal bandsaw head. Ideal for professionals.</p>
-              <div class="prod_price"><span class="reduce">$3,000</span> <span class="price">$2,499</span></div>
-              <div class="prod_details_tab d-flex justify-content-between px-3 mt-3">
-                <a href="#" class="prod_buy" data-id="peterson-sawmill" data-name="Peterson Horizontal Band Portable Saw Mill" data-price="2499" data-quantity="1">Add to Cart</a>
-                <a href="milling.html" class="prod_details">Back to Milling</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="col-md-8 mb-4">
-          <div class="prod_box">
-            <div class="center_prod_box text-center">
-              <div class="product_title"><a href="#">Forestry - Alaskan Mill for Chainsaw</a></div>
-              <div class="product_img mb-3">
-                <img src="images/alaskan%20mill.jpg" alt="Alaskan Mill" class="img-fluid" />
-              </div>
-              <p class="px-3">Mounts to your chainsaw. Lightweight and portable. Great for DIYers milling slabs on-site.</p>
-              <div class="prod_price"><span class="price">$199</span></div>
-              <div class="prod_details_tab d-flex justify-content-between px-3 mt-3">
-                <a href="#" class="prod_buy" data-id="alaskan-mill" data-name="Forestry - Alaskan Mill for Chainsaw" data-price="199" data-quantity="1">Add to Cart</a>
-                <a href="milling.html" class="prod_details">Back to Milling</a>
-              </div>
+            <p class="px-3">Professional-grade chainsaw with high-performance cutting power, ideal for felling trees and heavy-duty forestry work.</p>
+            <div class="prod_price"><span class="price">$429</span></div>
+            <div class="prod_details_tab d-flex justify-content-center gap-2 mt-3">
+              <a href="#" class="btn btn-dark btn-sm prod_buy" data-id="echo-cs590" data-name="Echo CS-590 Timber Wolf" data-price="429" data-quantity="1">Add to Cart</a>
+              <a href="chainsaws.html" class="btn btn-light btn-sm prod_details">Back to Saws</a>
             </div>
           </div>
         </div>
       </div>
-
-
-      <div class="footer mt-5 text-center py-3">
-        <div class="center_footer">
-          TimberSand Lumber Supply &copy; 2025<br />
-          <img src="images/payment.gif" alt="Payment Methods" />
+      <div class="col-md-4 mb-4">
+        <div class="prod_box">
+          <div class="center_prod_box text-center">
+            <div class="product_title"><a href="#">Stihl MS 362 C-M</a></div>
+            <div class="product_img mb-3">
+              <img src="images/stihl362.jpg" alt="Stihl Chainsaw" class="img-fluid">
+            </div>
+            <p class="px-3">Fuel-efficient, smart engine management chainsaw, reliable for forestry professionals.</p>
+            <div class="prod_price"><span class="reduce">$679</span> <span class="price">$599</span></div>
+            <div class="prod_details_tab d-flex justify-content-center gap-2 mt-3">
+              <a href="#" class="btn btn-dark btn-sm prod_buy" data-id="stihl-362" data-name="Stihl MS 362 C-M" data-price="599" data-quantity="1">Add to Cart</a>
+              <a href="chainsaws.html" class="btn btn-light btn-sm prod_details">Back to Saws</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="prod_box">
+          <div class="center_prod_box text-center">
+            <div class="product_title"><a href="#">Silky Katanaboy 500mm</a></div>
+            <div class="product_img mb-3">
+              <img src="images/katanaboy.jpg" alt="Silky Saw" class="img-fluid">
+            </div>
+            <p class="px-3">Folding saw ideal for trail clearing and remote cutting where chainsaws aren't practical.</p>
+            <div class="prod_price"><span class="reduce">$130</span> <span class="price">$119</span></div>
+            <div class="prod_details_tab d-flex justify-content-center gap-2 mt-3">
+              <a href="#" class="btn btn-dark btn-sm prod_buy" data-id="silky-katana" data-name="Silky Katanaboy 500mm" data-price="119" data-quantity="1">Add to Cart</a>
+              <a href="chainsaws.html" class="btn btn-light btn-sm prod_details">Back to Saws</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="prod_box">
+          <div class="center_prod_box text-center">
+            <div class="product_title"><a href="#">Bahco Bow Saw 30"</a></div>
+            <div class="product_img mb-3">
+              <img src="images/bowsaw.webp" alt="Bahco Bow Saw" class="img-fluid">
+            </div>
+            <p class="px-3">Strong and versatile bow saw for yard and log cutting. Built for comfort and cutting accuracy.</p>
+            <div class="prod_price"><span class="price">$100</span></div>
+            <div class="prod_details_tab d-flex justify-content-center gap-2 mt-3">
+              <a href="#" class="btn btn-dark btn-sm prod_buy" data-id="bahco-bowsaw" data-name="Bahco Bow Saw 30" data-price="100" data-quantity="1">Add to Cart</a>
+              <a href="chainsaws.html" class="btn btn-light btn-sm prod_details">Back to Saws</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="prod_box">
+          <div class="center_prod_box text-center">
+            <div class="product_title"><a href="#">Peterson Horizontal Band Portable Saw Mill</a></div>
+            <div class="product_img mb-3">
+              <img src="images/sawmill.jpg" alt="Sawmill" class="img-fluid">
+            </div>
+            <p class="px-3">Designed for industrial log milling. Mobile, adjustable horizontal bandsaw head. Ideal for professionals.</p>
+            <div class="prod_price"><span class="reduce">$3,000</span> <span class="price">$2,499</span></div>
+            <div class="prod_details_tab d-flex justify-content-center gap-2 mt-3">
+              <a href="#" class="btn btn-dark btn-sm prod_buy" data-id="peterson-sawmill" data-name="Peterson Horizontal Band Portable Saw Mill" data-price="2499" data-quantity="1">Add to Cart</a>
+              <a href="milling.html" class="btn btn-light btn-sm prod_details">Back to Milling</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="prod_box">
+          <div class="center_prod_box text-center">
+            <div class="product_title"><a href="#">Forestry - Alaskan Mill for Chainsaw</a></div>
+            <div class="product_img mb-3">
+              <img src="images/alaskan%20mill.jpg" alt="Alaskan Mill" class="img-fluid">
+            </div>
+            <p class="px-3">Mounts to your chainsaw. Lightweight and portable. Great for DIYers milling slabs on-site.</p>
+            <div class="prod_price"><span class="price">$199</span></div>
+            <div class="prod_details_tab d-flex justify-content-center gap-2 mt-3">
+              <a href="#" class="btn btn-dark btn-sm prod_buy" data-id="alaskan-mill" data-name="Forestry - Alaskan Mill for Chainsaw" data-price="199" data-quantity="1">Add to Cart</a>
+              <a href="milling.html" class="btn btn-light btn-sm prod_details">Back to Milling</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
+  <footer class="text-center mt-5 bg-dark text-secondary p-3 rounded">
+    TimberSand Lumber Supply &copy; 2025<br>
+    <img src="images/payment.gif" alt="Payment Methods" height="24">
+  </footer>
 </div>
-
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

@@ -1,133 +1,113 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TimberSand Lumber Supply</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
-  <link rel="stylesheet" type="text/css" href="style.css" />
-  <script type="text/javascript" src="boxOver.js" defer></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="boxOver.js" defer></script>
 </head>
 <body>
-<div id="main_container">
-
-  <div id="header">
-    <div class="top_right">
-      <div class="languages">
-        <div class="lang_text">Languages:</div>
-        <a href="#" class="lang"><img src="images/en.gif" alt="English" /></a>
-        <a href="#" class="lang"><img src="images/de.gif" alt="German" /></a>
-      </div>
-    </div>
-    <div id="logo">
+<div class="container py-3">
+  <header class="d-flex justify-content-between align-items-center mb-3">
+    <div>
       <a href="index.html">
-        <img src="images/freepik-hand-drawn-professional-woodwork-carpenter-logo-202504162246231R1M.png" alt="TimberSand Logo" width="210" height="170" />
+        <img src="images/freepik-hand-drawn-professional-woodwork-carpenter-logo-202504162246231R1M.png" alt="TimberSand Logo" width="210" height="170">
       </a>
     </div>
+    <div class="d-flex align-items-center">
+      <span class="me-2 text-secondary">Languages:</span>
+      <a href="#" class="me-2"><img src="images/en.gif" alt="English"></a>
+      <a href="#"><img src="images/de.gif" alt="German"></a>
+    </div>
+  </header>
+  <div class="text-center mb-4">
+    <h2 class="fw-bold" style="font-family: 'Brush Script MT', cursive; font-size: 35px; color: black;">Cut with Precision, Mill with Power</h2>
   </div>
-
-
-  <div id="tagline">Cut with Precision, Mill with Power</div>
-
-
-  <div id="main_content">
-
-    <div id="menu_tab">
-      <ul class="menu">
-        <li><a href="index.html" class="nav">Home</a></li>
-        <li><a href="chainsaws.html" class="nav">Saws</a></li>
-        <li><a href="milling.html" class="nav">Milling</a></li>
-        <li><a href="product-details.html" class="nav">Product Details</a></li>
-        <li><a href="support.html" class="nav">Support</a></li>
-        <li><a href="contact.html" class="nav">Contact</a></li>
-        <li><a href="cart.html" class="nav">Cart</a></li>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark rounded mb-4">
+    <div class="container-fluid justify-content-center">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="chainsaws.html">Saws</a></li>
+        <li class="nav-item"><a class="nav-link" href="milling.html">Milling</a></li>
+        <li class="nav-item"><a class="nav-link" href="product-details.html">Product Details</a></li>
+        <li class="nav-item"><a class="nav-link" href="support.html">Support</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="cart.html">Cart</a></li>
       </ul>
     </div>
-
-
-    <div class="left_content">
-      <div class="title_box">Deal of the Day</div>
-      <div class="border_box">
-        <div class="product_title"><a href="product-details.html">Makita 156 MX-VL</a></div>
-        <div class="product_img"><a href="product-details.html"><img src="images/p1.jpg" alt="Makita Deal" /></a></div>
-        <div class="prod_price"><span class="reduce">$350</span> <span class="price">$270</span></div>
-      </div>
-    </div>
-
-
-    <div class="center_content">
-      <div class="oferta">
-        <img src="images/freepik-hand-drawn-professional-woodwork-carpenter-logo-202504162246231R1M.png" width="165" height="113" class="oferta_img" alt="Chainsaw Banner" />
-        <div class="oferta_details">
-          <div class="oferta_title">Our Mission</div>
-          <div class="oferta_text">At TimberSand Lumber Supply, our mission is to empower craftsmen, homesteaders, and professionals with high-quality chainsaw and milling equipment. We are committed to delivering reliable tools, expert guidance, and exceptional customer service that support efficient wood processing and sustainable craftsmanship from forest to finish.</div>
+  </nav>
+  <div class="row">
+    <div class="col-lg-3 mb-4">
+      <div class="bg-secondary text-white text-center p-2 rounded">
+        <i class="fas fa-fire me-2"></i>Deal of the Day</div>
+      <div class="border p-3 bg-light">
+        <div class="product_title"><a href="product-details.html">Stihl MS 362 C-M</a></div>
+        <div class="product_img my-2">
+          <a href="product-details.html"><img src="images/stihl362.jpg" alt="Stihl Chainsaw" class="img-fluid"></a>
+        </div>
+        <div class="prod_price">
+          <span class="reduce">$679</span> <span class="price">$599</span>
         </div>
       </div>
-
-      <div class="center_title_bar">Recommended Products</div>
-
-      <div class="prod_box">
-        <div class="center_prod_box">
+    </div>
+    <div class="col-lg-6 mb-4">
+      <div class="d-flex align-items-center bg-light p-3 mb-4 rounded shadow-sm">
+        <img src="images/freepik-hand-drawn-professional-woodwork-carpenter-logo-202504162246231R1M.png" width="165" height="113" class="me-3" alt="Chainsaw Banner">
+        <div>
+          <h5 class="text-primary">Our Mission</h5>
+          <p class="small">At TimberSand Lumber Supply, our mission is to empower craftsmen, homesteaders, and professionals with high-quality chainsaw and milling equipment. We are committed to delivering reliable tools, expert guidance, and exceptional customer service that support efficient wood processing and sustainable craftsmanship from forest to finish.</p>
+        </div>
+      </div>
+      <div class="bg-secondary text-white p-2 rounded mb-3">Recommended Products</div>
+      <div class="d-flex flex-wrap justify-content-between">
+        <div class="border p-3 bg-white rounded mb-3" style="width: 30%;">
           <div class="product_title"><a href="#">Oregon 20' Bar and Chain</a></div>
-          <div class="product_img"><a href="#"><img src="images/barchain.jpg" height="150" width="120" alt="Bar and Chain" /></a></div>
+          <div class="product_img my-2"><img src="images/barchain.jpg" class="img-fluid" alt="Bar and Chain"></div>
           <div class="prod_price"><span class="reduce">$50</span> <span class="price">$49.99</span></div>
+          <div class="d-flex justify-content-center gap-2 mt-2 w-100">
+            <a href="#" class="btn btn-dark btn-sm flex-grow-1 prod_buy" data-id="bar-chain" data-name="Oregon 20' Bar and Chain" data-price="49.99" data-quantity="1">Add to Cart</a>
+            <a href="product-details.html" class="btn btn-light btn-sm flex-grow-1 prod_details">Details</a>
+          </div>
         </div>
-        <div class="prod_details_tab">
-          <a href="#" class="prod_buy" data-id="bar-chain" data-name="Oregon 20' Bar and Chain" data-price="49.99" data-quantity="1">Add to Cart</a>
-          <a href="#" class="prod_details">Details</a>
-        </div>
-        <p class="product_description" style="display:none;">Durable 20" Oregon bar and chain combo for efficient cutting and long life. Ideal for heavy-duty lumber tasks.</p>
-      </div>
-
-
-      <div class="prod_box">
-        <div class="center_prod_box">
+        <div class="border p-3 bg-white rounded mb-3" style="width: 30%;">
           <div class="product_title"><a href="#">Husqvarna Premix Fuel</a></div>
-          <div class="product_img"><a href="#"><img src="images/premixfuel.jpg" height="150" width="120" alt="Premix Fuel" /></a></div>
+          <div class="product_img my-2"><img src="images/premixfuel.jpg" class="img-fluid" alt="Premix Fuel"></div>
           <div class="prod_price"><span class="price">$10</span></div>
+          <div class="d-flex justify-content-center gap-2 mt-2 w-100">
+            <a href="#" class="btn btn-dark btn-sm flex-grow-1 prod_buy" data-id="husqvarna-premix" data-name="Husqvarna Premix Fuel" data-price="10" data-quantity="1">Add to Cart</a>
+            <a href="product-details.html" class="btn btn-light btn-sm flex-grow-1 prod_details">Details</a>
+          </div>
         </div>
-        <div class="prod_details_tab">
-          <a href="#" class="prod_buy" data-id="husqvarna-premix" data-name="Husqvarna Premix Fuel" data-price="10" data-quantity="1">Add to Cart</a>
-          <a href="#" class="prod_details">Details</a>
-        </div>
-        <p class="product_description" style="display:none;">High-performance 50:1 fuel/oil mix for 2-stroke engines. Cleaner combustion, longer engine life.</p>
-      </div>
-
-
-      <div class="prod_box">
-        <div class="center_prod_box">
+        <div class="border p-3 bg-white rounded mb-3" style="width: 30%;">
           <div class="product_title"><a href="#">Oregon File Set</a></div>
-          <div class="product_img"><a href="#"><img src="images/oregon.jpg" height="150" width="120" alt="File Set" /></a></div>
+          <div class="product_img my-2"><img src="images/oregon.jpg" class="img-fluid" alt="File Set"></div>
           <div class="prod_price"><span class="price">$19</span></div>
+          <div class="d-flex justify-content-center gap-2 mt-2 w-100">
+            <a href="#" class="btn btn-dark btn-sm flex-grow-1 prod_buy" data-id="oregon-file-set" data-name="Oregon File Set" data-price="19" data-quantity="1">Add to Cart</a>
+            <a href="product-details.html" class="btn btn-light btn-sm flex-grow-1 prod_details">Details</a>
+          </div>
         </div>
-        <div class="prod_details_tab">
-          <a href="#" class="prod_buy" data-id="oregon-file-set" data-name="Oregon File Set" data-price="19" data-quantity="1">Add to Cart</a>
-          <a href="#" class="prod_details">Details</a>
-        </div>
-        <p class="product_description" style="display:none;">Professional file set for sharpening chains. Includes round and flat files for all sizes.</p>
       </div>
     </div>
-
-
-    <div class="right_content">
-      <div>
-        <h3>Top Products</h3>
-        <div class="row" id="productList"></div>
-      </div>
-      <div class="cart_details">
-        <span id="cartItems">0</span> items<br />
-        <span class="border_cart"></span>
-        Total: <span class="price" id="cartTotal">$0.00</span><br /><br />
-        <a href="cart.html" class="btn_checkout">Go To Cart</a>
+    <div class="col-lg-3">
+      <div class="cart_details p-4 border rounded bg-light text-center">
+        <h5 class="text-primary mb-3">
+          <i class="fas fa-shopping-cart me-2"></i>Cart Summary
+        </h5>
+        <p><span id="cartItems">0</span> items</p>
+        <p>Total: <span id="cartTotal" class="price">$0.00</span></p>
+        <a href="cart.html" class="btn btn-dark btn-sm mt-2">Go To Cart</a>
       </div>
     </div>
-
-
-    <div class="footer">
-      <div class="center_footer">
-        TimberSand Lumber Supply &copy; 2025<br />
-        <img src="images/payment.gif" alt="Payment Methods" />
-      </div>
-    </div>
-  </div>
+  <footer class="text-center mt-5 bg-dark text-secondary p-3 rounded">
+    TimberSand Lumber Supply &copy; 2025<br>
+    <img src="images/payment.gif" alt="Payment Methods" height="24">
+  </footer>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>

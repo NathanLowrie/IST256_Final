@@ -1,0 +1,64 @@
+[
+  {
+    "id": "echo-cs590",
+    "name": "Echo CS-590 Timber Wolf",
+    "description": "Professional-grade chainsaw with high-performance cutting power, ideal for felling trees and heavy-duty forestry work.",
+    "price": 429,
+    "image": "images/echo.jpg"
+  },
+  {
+    "id": "stihl-362",
+    "name": "Stihl MS 362 C-M",
+    "description": "Fuel-efficient, smart engine management chainsaw, reliable for forestry professionals.",
+    "price": 599,
+    "image": "images/stihl362.jpg"
+  },
+  {
+    "id": "silky-katana",
+    "name": "Silky Katanaboy 500mm",
+    "description": "Heavy-duty folding saw ideal for trail clearing and remote cutting where chainsaws aren't practical.",
+    "price": 119,
+    "image": "images/katanaboy.jpg"
+  },
+  {
+    "id": "bahco-bowsaw",
+    "name": "Bahco Bow Saw 30\"",
+    "description": "Strong and versatile bow saw for yard and log cutting. Built for comfort and cutting accuracy.",
+    "price": 100,
+    "image": "images/bowsaw.webp"
+  },
+  {
+    "id": "peterson-sawmill",
+    "name": "Peterson Horizontal Band Portable Saw Mill",
+    "description": "Designed for industrial log milling. Mobile, adjustable horizontal bandsaw head. Ideal for professionals.",
+    "price": 2499,
+    "image": "images/sawmill.jpg"
+  },
+  {
+    "id": "alaskan-mill",
+    "name": "Forestry - Alaskan Mill for Chainsaw",
+    "description": "Mounts to your chainsaw. Lightweight and portable. Great for DIYers milling slabs on-site.",
+    "price": 199,
+    "image": "images/alaskan mill.jpg"
+  },
+  {
+    "id": "bar-chain",
+    "name": "Oregon 20' Bar and Chain",
+    "description": "Durable 20\" Oregon bar and chain combo for efficient cutting and long life.",
+    "price": 49.99,
+    "image": "images/barchain.jpg"
+  },
+  {
+    "id": "husqvarna-premix",
+    "name": "Husqvarna Premix Fuel",
+    "description": "High-performance 50:1 fuel/oil mix for 2-stroke engines. Cleaner combustion, longer engine life.",
+    "price": 10,
+    "image": "images/premixfuel.jpg"
+  },
+  {
+    "id": "oregon-file-set",
+    "name": "Oregon File Set",
+    "description": "Professional file set for sharpening chains. Includes round and flat files for all sizes.",
+    "price": 19,
+    "image": "images/oregon.jpg"
+  } ]
